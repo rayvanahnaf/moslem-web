@@ -155,7 +155,7 @@ header.sticky .button{
 
 .wrap {
     display: flex;
-    animation: slide 10s infinite;
+    animation: slide 30s infinite;
 }
 
 .wrap  img{
@@ -193,6 +193,67 @@ header.sticky .button{
     }
     
 }
+
+/* Jam */
+
+.hero{
+    display: flex;
+    justify-content: center;
+}
+
+
+.container-jam{
+    width: 800px;
+    height: 180px;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.clock{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(116, 142, 99);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+    color: white;
+}
+
+    .clock span{
+        font-size: 80px;
+        width: 110px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .clock span::after{
+        font-size: 16px;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #hrs::after{
+        content: 'hours';
+    }
+
+    #min::after{
+        content: 'MINS';
+    }
+
+    #sec::after{
+    content: 'SEC';
+    }
+
+    .judul{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 
 /* Jadwal sholat */
 

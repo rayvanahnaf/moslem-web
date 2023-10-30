@@ -3,6 +3,19 @@ window.addEventListener("scroll",function(){
     header.classList.toggle('sticky', window.scrollY >= 0);
 });
 
+let hrs = document.getElementById("hrs");
+let min = document.getElementById('min');
+let sec = document.getElementById('sec');
+
+setInterval(()=>{
+    let currentTime = new Date();
+
+    hrs.innerHTML = (currentTime.getHours()<10?"0":"") + currentTime.getHours();
+    min.innerHTML = (currentTime.getMinutes()<10?"0":"") + currentTime.getMinutes();
+    sec.innerHTML = (currentTime.getSeconds()<10?"0":"") + currentTime.getSeconds();
+},1000)
+
+
 const city = 1301 ;
 const date = new Date();
 const dd = String(date.getDate()).padStart (2, '0'); // paddstart itu didepan angka ada angka 0 jika digitnya kurang dari batas yang kita tentukan.

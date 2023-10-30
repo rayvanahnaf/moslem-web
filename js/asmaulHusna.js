@@ -3,6 +3,7 @@ window.addEventListener("scroll",function(){
     header.classList.toggle('sticky', window.scrollY >= 0);
 });
 
+
 window.onload = function () {
     getDataAsma();
 }
