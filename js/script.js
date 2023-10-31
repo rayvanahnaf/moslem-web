@@ -1,3 +1,4 @@
+// scroll pitc js
 window.addEventListener("scroll",function(){
     const header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY >= 0);
@@ -7,6 +8,7 @@ let hrs = document.getElementById("hrs");
 let min = document.getElementById('min');
 let sec = document.getElementById('sec');
 
+// jam js
 setInterval(()=>{
     let currentTime = new Date();
 
@@ -96,4 +98,20 @@ fetch(jadwalAPI)
         tr.appendChild(maghrib);
         tr.appendChild(isya);
     });
+})
+
+const toggle = document.getElementById('toggleDark');
+const body = document.querySelector('body');
+
+toggle.addEventListener('click', function(){
+    this.classList.toggle('bxs-moon');
+    if(this.classList.toggle( 'bxs-sun')){
+        body.style.background = '#d7e5ca';
+        body.style.color = 'black';
+        body.style.transition = '2s';
+        }else {
+            body.style.background = 'black';
+            body.style.color = 'white';
+            body.style.transition = '2s';
+        }
 })

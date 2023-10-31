@@ -1,9 +1,10 @@
+// scroll pitc js
 window.addEventListener("scroll",function(){
     const header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY >= 0);
 });
 
-
+// asmaul-husna js
 window.onload = function () {
     getDataAsma();
 }
@@ -76,3 +77,19 @@ function displayDataAsma(asma) {
         resultDiv.appendChild(asmaDiv)
     })
 }
+
+const toggle = document.getElementById('toggleDark');
+const body = document.querySelector('body');
+
+toggle.addEventListener('click', function(){
+    this.classList.toggle('bxs-moon');
+    if(this.classList.toggle( 'bxs-sun')){
+        body.style.background = '#d7e5ca';
+        body.style.color = 'black';
+        body.style.transition = '2s';
+        }else {
+            body.style.background = 'black';
+            body.style.color = 'white';
+            body.style.transition = '2s';
+        }
+})
