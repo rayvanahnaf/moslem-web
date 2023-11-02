@@ -421,3 +421,16 @@ header.sticky .button {
     margin-top: 1rem;
     border-top: 3px solid gray;
 }
+
+.sukses {
+    padding: 45px 3px;
+    background: var(--bg-color);
+    border-radius: 0.8rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all ease 0.50s;
+}
+
+.sukses:hover {
+transform: translateY(-8px);
+}
