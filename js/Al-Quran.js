@@ -11,7 +11,8 @@ window.onload = function () {
 }
 
 function getDataSurat() {
-    fetch('https://api.banghasan.com/quran/format/json/surat')
+    const jadwalAPI = `https://api.myquran.com/v2/quran/juz/semua`
+    fetch(jadwalAPI)
         .then(function (response) {
             if (!response.ok) {
                 throw new Error('gagal mengambil data')
